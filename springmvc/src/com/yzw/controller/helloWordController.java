@@ -11,7 +11,7 @@ public class helloWordController {
 	    public String hello(@RequestParam(value = "name", required = false, defaultValue = "World") String name,
 	                Model model) {
 	            model.addAttribute("name", name);
-	            return "hello"; // 通过这里跳转到helloworld.jsp
+	            return "hello"; // 璺宠浆helloworld.jsp
 	    }
 
 }
