@@ -7,12 +7,6 @@
 <title>SpringmvcDemo</title>
 </head>
 <body>
-	<p>cnmD</p>
-	<p>${name}</p>
-	<form action="login.do" method="post">
-		<span>userName</span><input name="username">
-		<span>passWord</span><input name="password">
-		<input type="submit" value="ç»å½"/>
-	</form>
+	<p>登录成功</p>
 </body>
 </html>

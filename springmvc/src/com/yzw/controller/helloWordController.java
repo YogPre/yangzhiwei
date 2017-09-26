@@ -1,16 +1,12 @@
 package com.yzw.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class helloWordController {
 	 @RequestMapping("/hello")
-	    public String hello(@RequestParam(value = "name", required = false, defaultValue = "World") String name,
-	                Model model) {
-	            model.addAttribute("name", name);
+	    public String hello() {
 	            return "hello"; // 跳转helloworld.jsp
 	    }
 
