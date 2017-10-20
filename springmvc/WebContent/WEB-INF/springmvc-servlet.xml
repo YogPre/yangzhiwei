@@ -14,9 +14,9 @@
 	<context:component-scan base-package="com.yzw.controller"></context:component-scan>
 	
 	<!-- 	加载静态资源 -->
-    <mvc:annotation-driven/>
-	<mvc:resources location="../css/**" mapping="/css/**"></mvc:resources>
-	<mvc:resources location="../images/**" mapping="/images/**"></mvc:resources>
+<!--     <mvc:annotation-driven/> -->
+<!-- 	<mvc:resources location="/css/**" mapping="/css/**"></mvc:resources> -->
+<!-- 	<mvc:resources location="/images/**" mapping="/images/**"></mvc:resources> -->
 	
 	
 	<!-- 在Spring配置文件中配置ViewResolver -->
@@ -27,8 +27,7 @@
 	<!-- <property name="prefix" value="/WEB-INF/page/" /> -->
 	<!-- <property name="suffix" value=".jsp" /> -->
 	<!-- </bean> -->
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
 			<value>/WEB-INF/jsp/</value>
 		</property>
