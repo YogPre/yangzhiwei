@@ -9,15 +9,17 @@
 		<!--     springmvc的核心是dispatcherServlet他负责控制整个页面的请求路径 -->
     	<servlet-name>springmvc</servlet-name>
     	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-<!--     	<init-param> -->
-<!--             <param-name>contextConfigLocation</param-name> -->
-<!--             <param-value>classpath:spring-servlet.xml</param-value> -->
-<!--             <param-value>/WEB-INF/spring-servlet.xml</param-value> -->
-<!--         </init-param> -->
-		<!-- load-on-startup:表示容器启动时初始化该servlet; -->
+    	<init-param>
+            <param-name>contextConfigLocation</param-name>
+            <!-- 下面代码会加载src下的springmvc-servlet.xml。 -->
+            <param-value>classpath:springmvc-servlet.xml</param-value>
+			<!-- 下面代码会加载WEB-INF下的springmvc-servlet.xml。 -->
+<!--             <param-value>/WEB-INF/springmvc-servlet.xml</param-value> -->
+        </init-param>
+<!-- 		load-on-startup:表示容器启动时初始化该servlet; -->
     	<load-on-startup>1</load-on-startup>
     </servlet>
-     
+    
 <!--     <listener> -->
 <!--     	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> -->
 <!--     </listener> -->

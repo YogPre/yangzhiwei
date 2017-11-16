@@ -1,5 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
+<%@ page language="java" import="java.util.*" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+<%
+String path = request.getContextPath();
+// String path = "";
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+out.println(basePath);
+%>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -29,7 +35,7 @@
 					id="tologin"></a>
 				<div id="wrapper">
 					<div id="login" class="animate form">
-						<form action="LoginController.login" autocomplete="on">
+						<form action="<%=basePath%>LoginController/login" >
 							<h1>Log in</h1>
 							<p>
 								<label for="username" class="uname" data-icon="u">用户名 </label> 
@@ -44,7 +50,7 @@
 								<label for="loginkeeping">Keep 	me logged in</label>
 							</p>
 							<p class="login button">
-								<input type="submit" value="Login" />
+								<input type="submit" value="登录" />
 							</p>
 							<p class="change_link">
 								Not a member yet ?
@@ -86,5 +92,11 @@
 			</div>
 		</section>
 	</div>
+	
+	
+	
+<script>
+
+</script>
 </body>
 </html>

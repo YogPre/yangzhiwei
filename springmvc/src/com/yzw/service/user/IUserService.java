@@ -8,6 +8,8 @@
  */
 package com.yzw.service.user;
 
+import com.yzw.entity.userEntity;
+
 /**
  * @ClassName:IUserService
  * @Description:TODO
@@ -15,5 +17,5 @@ package com.yzw.service.user;
  * @date 2017年9月28日下午3:46:17
  */
 public interface IUserService {
-
+	 userEntity checkLogin(String name,String password) ;
 }
