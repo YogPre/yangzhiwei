@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.yzw.entity.userEntity;
+import com.yzw.beans.UserBean;
 import com.yzw.service.user.IUserService;
 import com.yzw.service.user.impl.UserServiceImpl;
 
@@ -31,7 +31,7 @@ public class LoginController {
 	 */
 	@RequestMapping("/login")
 	public String login(String username, String password){
-		userEntity user = iUserService.checkLogin(username, password);
+		UserBean user = iUserService.checkLogin(username, password);
 		if (user != null) {
 			return "loginError";
 		}
@@ -39,7 +39,7 @@ public class LoginController {
 	}
 	public static void main(String[] args) {
 		IUserService iUserService = new UserServiceImpl();
-		userEntity user = iUserService.checkLogin("134","afd");
+		UserBean user = iUserService.checkLogin("134","afd");
 		System.out.println(user.getName());
 	}
 }

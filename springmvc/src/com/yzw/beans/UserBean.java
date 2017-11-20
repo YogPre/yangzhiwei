@@ -1,4 +1,4 @@
-package com.yzw.entity;
+package com.yzw.beans;
 
 /**
  * @ClassName:userDao
@@ -6,7 +6,7 @@ package com.yzw.entity;
  * @author: acer
  * @date 2017年9月28日上午11:42:13
  */
-public class userEntity {
+public class UserBean {
 	private int id;
 	private String name;
 	private String passWord;

@@ -8,7 +8,7 @@
  */
 package com.yzw.service.user;
 
-import com.yzw.entity.userEntity;
+import com.yzw.beans.UserBean;
 
 /**
  * @ClassName:IUserService
@@ -17,5 +17,5 @@ import com.yzw.entity.userEntity;
  * @date 2017年9月28日下午3:46:17
  */
 public interface IUserService {
-	 userEntity checkLogin(String name,String password) ;
+	 public UserBean checkLogin(String name,String password) ;
 }

@@ -8,8 +8,10 @@
  */
 package com.yzw.service.user.impl;
 
+import org.springframework.stereotype.Service;
+
+import com.yzw.beans.UserBean;
 import com.yzw.dao.UserDao;
-import com.yzw.entity.userEntity;
 import com.yzw.service.user.IUserService;
 
 /**
@@ -18,14 +20,15 @@ import com.yzw.service.user.IUserService;
  * @author: yzw
  * @date 2017年9月28日下午3:46:51
  */
+@Service
 public class UserServiceImpl implements IUserService{
 	private UserDao userDao;
 	/* (non-Javadoc)
 	 * @see com.yzw.service.user.IUserService#findUser(java.lang.String, java.lang.String)
 	 */
 	@Override
-	public userEntity checkLogin(String username, String password) {
-		userEntity user = null;
+	public UserBean checkLogin(String username, String password) {
+		UserBean user = null;
 		user = userDao.findUser(username, password);
 		
 		return user;

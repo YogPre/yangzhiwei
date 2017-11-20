@@ -14,7 +14,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.ParameterizedBeanPropertyRowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.yzw.entity.userEntity;
+import com.yzw.beans.UserBean;
 
 /**
  * @ClassName:UserDao
@@ -27,12 +27,12 @@ public class UserDao {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	public userEntity findUser(String name, String password){
+	public UserBean findUser(String name, String password){
 		String sql = "select id,name,password from user where name =? and password =?";
-		userEntity user = null;
+		UserBean user = null;
 		try {
-			RowMapper<userEntity> rm = ParameterizedBeanPropertyRowMapper.newInstance(userEntity.class);
-			user = (userEntity) jdbcTemplate.queryForObject(sql, new Object[]{name, password}, rm);
+			RowMapper<UserBean> rm = ParameterizedBeanPropertyRowMapper.newInstance(UserBean.class);
+			user = (UserBean) jdbcTemplate.queryForObject(sql, new Object[]{name, password}, rm);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
